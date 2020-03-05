@@ -14,7 +14,7 @@ function abrirPopUp () {
     
 }
 function fecharPopUp() {
-
+    
 }
 function humor () {
     var input = document.getElementById('humor').value
@@ -56,4 +56,28 @@ function tabuada2 () {
         i++
     }
     while (i<10)
+}
+
+function somaValores(){
+    input1 = document.getElementById("numero1").value 
+    input2 = document.getElementById("numero2").value
+    resultado = document.getElementById("resultado-soma")
+    resultado.innerHTML = Number(input1) + Number(input2)
+}
+function tabelaNumeros(valor) {
+    num = document.getElementById("num").value
+    resultado = document.getElementById("resultado")
+    if (valor == "adic")
+    {
+        i = 1
+        while(i<=10){
+            p = document.createElement('p')
+            resultado.appendChild(p)
+            if(i==1){
+                p.innerHTML="Adição: <br>"
+            }
+            p.innerHTML = `${num} + ${i} = ${Number(num)+i}`
+            i++
+        }
+    }
 }
